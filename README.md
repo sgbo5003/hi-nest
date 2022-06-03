@@ -126,6 +126,15 @@ patch(@Param('id') movieId: string) {
 - Query는 Query Parameter를 받아올 때 사용
     - ex ) `/users?id=123`
 
+### #2.2 Movies Service part One
+
+> 컨트롤러와 서비스의 역할
+> 
+- 컨트롤러
+    - url을 매핑, 리퀘스트를 받고, Query를 넘기거나 Body나 그 외의 것들을 넘기는 역할
+- 서비스
+    - 로직을 관리하는 역할
+
 
 
 
