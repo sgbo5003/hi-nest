@@ -42,5 +42,90 @@
 - 라우트 핸들러 데코레이터
 - HTTP GET 요청을 지정된 경로로 라우팅한다.
 
+## #2 REST API
+------------------
+
+### #2.0 Movies Controller
+
+> cli를 이용한 컨트롤러 생성
+> 
+- `nest g co` 명령어로 생성
+
+> POSTMAN으로 GET, POST, DELETE, PATCH 테스트
+> 
+
+```tsx
+@Get('/:id')
+getOne(@Param('id') movieId: string) {
+  return `This will return one movie with the id: ${movieId}`;
+}
+
+@Post()
+create() {
+  return 'This will create a movie';
+}
+
+@Delete('/:id')
+remove(@Param('id') movieId: string) {
+  return `This will delete a movie with the id: ${movieId}`;
+}
+
+@Patch('/:id')
+patch(@Param('id') movieId: string) {
+  return `This will patch a movie with the id: ${movieId}`;
+}
+```
+
+### #2.1 More Routes
+
+> 코드
+> 
+
+```tsx
+@Get()
+  getAll() {
+    return 'This will return all movies';
+  }
+
+  @Get('search')
+  search(@Query('year') searchingYear: string) {
+    return `We are searching for a movie made after: ${searchingYear}`;
+  }
+
+  @Get('/:id')
+  getOne(@Param('id') movieId: string) {
+    return `This will return one movie with the id: ${movieId}`;
+  }
+
+  @Post()
+  create(@Body() movieData) {
+    return movieData;
+  }
+
+  @Delete('/:id')
+  remove(@Param('id') movieId: string) {
+    return `This will delete a movie with the id: ${movieId}`;
+  }
+
+  @Patch('/:id')
+  patch(@Param('id') movieId: string, @Body() updateData) {
+    return {
+      updatedMovie: movieId,
+      ...updateData
+    };
+  }
+```
+
+- `@Body`
+    - body data를 받는다 (json data등)
+
+> `@Param` 과 `@Query`의 차이점
+> 
+- Param은 Path Variable을 받아올 때 사용
+    - ex ) `/users/123`
+- Query는 Query Parameter를 받아올 때 사용
+    - ex ) `/users?id=123`
+
+
 
 
