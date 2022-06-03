@@ -23,6 +23,24 @@
 > 
 - `npm run start:dev`
 
+### #1.1 Controllers
+
+> Controllers
+> 
+- 컨트롤러는 들어오는 요청을 처리하고 클라이언트에 응답을 반환하는 역할을 한다.
+
+> 데코레이터
+> 
+
+```tsx
+@Get('/hello') // <- 데코레이터
+  sayHello(): string {
+    return 'Hello everyone';
+  }
+```
+
+- 라우트 핸들러 데코레이터
+- HTTP GET 요청을 지정된 경로로 라우팅한다.
 
 
 
