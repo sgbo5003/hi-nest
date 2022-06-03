@@ -158,4 +158,13 @@ patch(@Param('id') movieId: string) {
 - `{transform: true}`
     - 유저들이 보낸 것들을 우리가 원하는 실제 타입으로 변환해준다.
 
+### #2.5 DTOs and Validation part Two
+
+> mapped-types
+> 
+- `npm i @nestjs/mapped-types`
+- 타입을 변환시키고 사용할 수 있게 하는 패키지
+
+
+
 
