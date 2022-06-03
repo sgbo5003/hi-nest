@@ -135,6 +135,27 @@ patch(@Param('id') movieId: string) {
 - 서비스
     - 로직을 관리하는 역할
 
+### #2.4 DTOs and Validation part One
 
+> DTO를 쓰는 이유
+> 
+- 프로그래머로서 코드를 더 간결하게 만들 수 있도록 해준다.
+
+> 유효성 관련 파이프 코드 작성 및 라이브러리 설치
+> 
+- main.ts에 작성
+    - `app.useGlobalPipes(new ValidationPipe());`
+- 라이브러리 설치
+    - `npm i class-validator class-transformer`
+        - class의 유효성을 검사하기 위해
+
+> ValidationPipe 옵션
+> 
+- `{whitelist: true}`
+    - true로 설정하면 아무 decorator도 없는 어떠한 property의 object를 거른다.
+- `{forbidNonWhitelisted: true}`
+    - 잘못된 리퀘스트 자체를 막아버린다. (보안 한 단계 업그레이드)
+- `{transform: true}`
+    - 유저들이 보낸 것들을 우리가 원하는 실제 타입으로 변환해준다.
 
 
