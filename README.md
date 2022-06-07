@@ -165,6 +165,12 @@ patch(@Param('id') movieId: string) {
 - `npm i @nestjs/mapped-types`
 - 타입을 변환시키고 사용할 수 있게 하는 패키지
 
+### 2.6 Modules and Dependency Injection
+
+> 모듈 생성
+> 
+- `nest g mo` 명령어로 모듈 생성
+
 
 
 
