@@ -187,5 +187,31 @@ patch(@Param('id') movieId: string) {
 > 
 - `npm run test:watch` 명령어로 테스트
 
+### #3.4 Testing update
+
+> beforeEach(fn, timeout)
+> 
+- 각각의 테스트가 실행되기 전에 매번 함수를 실행
+
+> beforeAll(fn, timeout)
+> 
+- 모든 테스트가 실행되기 전에 딱 한 번 함수를 실행
+
+> afterEach(fn, timeout)
+> 
+- 각각의 테스트가 완료된 후 함수를 실행
+
+> afterAll(fn, timeout)
+> 
+- 모든 테스트가 완료된 후 함수를 실행
+
+## #4 E2E TESTING
+------------------
+
+### #4.0 Testing movies
+
+> e2e 테스팅 하는 법
+> 
+- `npm run test:e2e`
 
 
