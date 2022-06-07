@@ -171,6 +171,21 @@ patch(@Param('id') movieId: string) {
 > 
 - `nest g mo` 명령어로 모듈 생성
 
+## #3 UNIT TESTING
+------------------
+
+### #3.0 Introduction to Testing in Nest
+
+> 테스팅 종류
+> 
+1. 유닛 테스팅
+    1. 서비스에서 분리된 유닛을 테스트하는 것
+    2. function 같은 하나의 유닛만을 테스트
+2. e2e(end-to-end) 테스팅
+    1. 모든 시스템을 테스트
+> 테스트 하는 법
+> 
+- `npm run test:watch` 명령어로 테스트
 
 
 
